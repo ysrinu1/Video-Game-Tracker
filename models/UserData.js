@@ -4,34 +4,42 @@ const sequelize = require('../config/connection');
 
 
 // Original model name was "User"
-class YourCustomModel extends Model {
+class UserData extends Model {
 }
 
-YourCustomModel.init(
+UserData.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
-    gamer: {
+    name: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
       unique: true,
       validate: {
-        isEmail: true,
+        isEmail: true
       },
+    },
+    birthmonth: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+    },
+    birthday: {
+      type: DataTypes.INTEGER,
+      allowNull: true
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8],
+        len: [8]
       },
     },
   },
@@ -46,4 +54,4 @@ YourCustomModel.init(
   }
 );
 
-module.exports = YourCustomModel;
+module.exports = UserData;
