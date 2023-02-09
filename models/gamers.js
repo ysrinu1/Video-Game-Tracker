@@ -32,11 +32,19 @@ Gamers.init(
     },
     birth_month: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      validate: {
+        max: 12,
+        min: 1,
+      }
     },
     birth_day: {
       type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: true,
+      validate: {
+        max: 31,
+        min: 1,
+      }
     },
     password: {
       type: DataTypes.STRING,
