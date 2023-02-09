@@ -1,47 +1,51 @@
 const { Model, DataTypes } = require('sequelize');
-const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 
 // Original model name was "User"
-class UserData extends Model {
+class Games extends Model {
 }
 
-UserData.init(
+Games.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
       autoIncrement: true
-    },
+  },
     name: {
       type: DataTypes.STRING,
       allowNull: false
-    },
-    email: {
-      type: DataTypes.STRING,
+  },
+    system: {
+    type: DataTypes.STRING,
+    allowNull: true
+  },
+   gamer_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true
-      },
+      references: {
+        model: 'gamers',
+        key: 'id'
     },
-    birthmonth: {
+  },
+    genre: {
+      type: DataTypes.STRING,
+      allowNull: true,
+  },
+    rating: {
       type: DataTypes.INTEGER,
       allowNull: true
-    },
-    birthday: {
-      type: DataTypes.INTEGER,
+  },
+    summary: {
+      type: DataTypes.TEXT,
       allowNull: true
-    },
-    password: {
-      type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8]
-      },
-    },
+  },
+    tips_tricks: {
+      type: DataTypes.TEXT,
+      allowNull: true
+  }
   },
   {
     hooks: {
@@ -50,8 +54,8 @@ UserData.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'custom',
-  }
+    modelName: 'games',
+  },
 );
 
-module.exports = UserData;
+module.exports = Games;
