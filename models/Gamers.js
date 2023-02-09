@@ -15,7 +15,7 @@ YourCustomModel.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    gamer: {
       type: DataTypes.STRING,
       allowNull: false,
     },
