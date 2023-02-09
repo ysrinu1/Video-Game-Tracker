@@ -1,14 +1,30 @@
 [
-    {
-      "user_name" : "Gamer01",
-      "password": "password01"
-    },
-    {
-      "user_name" : "Gamer02",
-      "password": "password02"
-    },
-    {
-      "user_name" : "Gamer03",
-      "password": "password03"
-    }
+  {
+    "name" : "Gamer01",
+    "password": "password01",
+    "email": "bbohling22@gmail.com",
+    "birth_month": "06",
+    "birth_day": "23"
+  },
+  {
+    "name" : "Gamer02",
+    "password": "password02",
+    "email": "iambenespino@gmail.com",
+    "birth_month": "04",
+    "birth_day": "22"
+  },
+  {
+    "name" : "Gamer03",
+    "password": "password03",
+    "email": "ysrinu15@gmail.com",
+    "birth_month": "12",
+    "birth_day": "24"
+  },
+  {
+    "name" : "Gamer04",
+    "password": "password04",
+    "email": "tagsxa@gmail.com",
+    "birth_month": "06",
+    "birth_day": "23"
+  }
 ]
