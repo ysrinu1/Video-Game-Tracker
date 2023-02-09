@@ -4,29 +4,41 @@ const sequelize = require('../config/connection');
 
 
 // Original model name was "User"
-class YourCustomModel extends Model {
+class GameData extends Model {
 }
 
-YourCustomModel.init(
+GameData.init(
   {
     id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       primaryKey: true,
-      autoIncrement: true,
+      autoIncrement: true
     },
-    game: {
+    title: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: false
     },
-    summary: {
-      type: DataTypes.STRING,
-      allowNull: true,
+   user_id: {
+      type: DataTypes.INTEGER,
+      allowNull: false
     },
-    summary: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: true,
   },
+    rating: {
+      type: DataTypes.INTEGER,
+      allowNull: true
+  },
+    summary: {
+      type: DataTypes.STRING,
+      allowNull: true
+  },
+    hints: {
+      type: DataTypes.STRING,
+      allowNull: true
+  }
   },
   {
     hooks: {
@@ -39,4 +51,4 @@ YourCustomModel.init(
   },
 );
 
-module.exports = YourCustomModel;
+module.exports = GameData;
