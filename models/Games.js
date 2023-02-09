@@ -15,11 +15,11 @@ YourCustomModel.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    game: {
+    name: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    summary: {
+    genre: {
       type: DataTypes.STRING,
       allowNull: true,
     },
