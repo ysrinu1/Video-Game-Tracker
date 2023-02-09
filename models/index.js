@@ -1,6 +1,5 @@
 const Gamers = require('./gamers');
 const Games = require('./games');
-const Genres = require('./genres');
 
 // A single Gamer can have many games
 Gamers.hasMany(Games, {
@@ -11,4 +10,4 @@ Games.belongsTo(Gamers, {
     foreignKey: 'gamer_id'
 });
 
-module.exports = { Gamers, Games, Genres };
+module.exports = { Gamers, Games };
