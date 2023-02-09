@@ -15,25 +15,18 @@ YourCustomModel.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    name: {
+    game: {
       type: DataTypes.STRING,
       allowNull: false,
     },
-    email: {
+    summary: {
       type: DataTypes.STRING,
-      allowNull: false,
-      unique: true,
-      validate: {
-        isEmail: true,
-      },
+      allowNull: true,
     },
-    password: {
+    summary: {
       type: DataTypes.STRING,
-      allowNull: false,
-      validate: {
-        len: [8],
-      },
-    },
+      allowNull: true,
+  },
   },
   {
     hooks: {
@@ -43,7 +36,7 @@ YourCustomModel.init(
     freezeTableName: true,
     underscored: true,
     modelName: 'custom',
-  }
+  },
 );
 
 module.exports = YourCustomModel;
