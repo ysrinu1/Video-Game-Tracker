@@ -9,6 +9,7 @@
       
     "
   >
+  {{#if logged_in}}
     <div
       style="
         width: 320px;
@@ -144,4 +145,8 @@
         >
       </form>
     </div>
-  </body>
+  {{else}}
+    <a href="/login">
+    </a>
+  {{/if}}
+</body>
