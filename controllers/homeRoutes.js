@@ -29,4 +29,13 @@ router.get('/signup', async (req, res) => {
   }
 });
 
+router.get('/gameentry', async (req, res) => {
+  try {
+    res.render('gameentry', { 
+    });
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
 module.exports = router;

@@ -1,11 +1,22 @@
-  <body style="margin: 0; padding: 0; background: url(./pic/gamingbackground.jpg); background-size: cover; background-color: #000; font-family: sans-serif;">
-  
-    <div
-      style="
+<body
+  style='
+    margin: 0;
+    padding: 0;
+    background: url(./pic//signupbackground.jpg);
+    background-size: 1500px;
+    background-repeat:no-repeat;
+    background-color: #000;
+    font-family: sans-serif;
+    background-position: center 10px; 
+  '
+>
+
+  <div
+    style='
 
         width: 320px;
         height: 450px;
-        background: #cfcdb6;
+        background: #cecdc2;
         color: #000;
         top: 50%;
         left: 50%;
@@ -14,31 +25,14 @@
         box-sizing: border-box;
         border-radius: 20px;
         padding: 20px 30px;
-
-      "
-    >
-      <h1 style="text-align: center; font-size: 22px">Create an Account</h1>
-      <form class="loginform">
-        <input
-          style="
-
-            width: 100%;
-            margin-bottom: 20px;
-            border: none;
-            border-bottom: 2px solid #000;
-            background: transparent;
-            outline: none;
-            height: 40px;
-            color: #000;
-
-          "
-          type="text"
-          name=""
-          placeholder="First Name"
-        />
-
-        <input
-          style="
+        box-shadow: 20px 20px 20px;
+        transition: box-shadow .3s;
+      '
+  >
+    <h1 style='text-align: center; font-size: 22px'>Create an Account</h1>
+    <form class='loginform'>
+      <input
+        style='
 
             width: 100%;
             margin-bottom: 20px;
@@ -48,16 +42,14 @@
             outline: none;
             height: 40px;
             color: #000;
+          '
+        type='text'
+        name=''
+        placeholder='First Name'
+      />
 
-          "
-          type="date"
-          name=""
-          placeholder="Birth Month"
-        />
-
-        <input
-          style="
-
+      <input
+        style='
             width: 100%;
             margin-bottom: 20px;
             border: none;
@@ -66,16 +58,14 @@
             outline: none;
             height: 40px;
             color: #000;
+          '
+        type='date'
+        name=''
+        placeholder='Birth Month'
+      />
 
-          "
-          type="text"
-          name=""
-          placeholder="Enter Username"
-        />
-
-        <input
-          style="
-
+      <input
+        style='
             width: 100%;
             margin-bottom: 20px;
             border: none;
@@ -84,44 +74,56 @@
             outline: none;
             height: 40px;
             color: #000;
+          '
+        type='text'
+        name=''
+        placeholder='Enter Username'
+      />
 
-          "
-          type="password"
-          name=""
-          placeholder="Enter Password"
-        />
+      <input
+        style='
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #000;
+          '
+        type='password'
+        name=''
+        placeholder='Enter Password'
+      />
 
-        <input
-          style="
-
+      <input
+        style='
             width: 100%;
             margin-bottom: 20px;
             border: none;
             outline: none;
             height: 40px;
-            background: #ec1212;
+            background: #2079ff;
             color: #fff;
+            font-family: "Press Start 2P", cursive;
             font-size: 18px;
             border-radius: 6px;
+          '
+        type='submit'
+        name=''
+        value='Sign Up'
+      /><br />
 
-          "
-          type="submit"
-          name=""
-          value="Sign Up"
-        /><br />
-
-        <a
-          href="/login"
-          style="
+      <a
+        href='/login'
+        style='
 
             text-decoration: none;
             font-size: 12px;
             line-height: 20px;
             color: #000;
-
-          "
-          >Already have an account? Login Here!</a
-        >
-      </form>
-    </div>
-  </body>
+          '
+      >Already have an account? Login Here!</a>
+    </form>
+  </div>
+</body>
