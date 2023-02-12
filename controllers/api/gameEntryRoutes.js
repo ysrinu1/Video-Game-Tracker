@@ -1,10 +1,10 @@
 const router = require('express').Router();
-const { Gamers, Games } = require('../../models');
+const { Game } = require('../../models');
 
 // Get all Games
 router.get('/', async (req, res) => {
     try {
-        const postedData = await Games.findAll({
+        const postedData = await Game.findAll({
         })
             const posts = postedData.map((post) => post.get({ plain: true }));
             res.status(200).json({ posts });
@@ -17,10 +17,10 @@ router.get('/', async (req, res) => {
 // Creates a new Game
 router.post('/', async (req, res) => {
     try {
-        const post = await Games.create({
-            name: req.body.name,
+        const post = await Game.create({
+            title: req.body.name,
             genre: req.body.genre,
-            gamer_id: req.session.gamer_id,
+            user_id: req.session.gamer_id,
             rating: req.body.rating,
             summary: req.body.summary,
             tips_tricks: req.body.tips_tricks
