@@ -1,22 +1,22 @@
 [
     {
-      "name" : "The Legend of Zelda",
-      "gamer_id": "1",
+      "title" : "The Legend of Zelda",
+      "user_id": "1",
       "genre": "Action RPG",
       "rating": "9",
       "summary": "Top-down 8-bit game",
       "tips_tricks": "When in the lost woods, go up 1 screen, left 1 screen, down 1 screen and left 1 screen"
     },
     {
-      "name" : "The Legend of Zelda",
-      "gamer_id": "2",
+      "title" : "The Legend of Zelda",
+      "user_id": "2",
       "genre": "Action RPG",
       "rating": "5",
       "summary": "Top-down 8-bit game"
     }, 
     {
-      "name" : "The Legend of Zelda",
+      "title" : "The Legend of Zelda",
       "system": "NES",
-      "gamer_id": "3"
+      "user_id": "3"
     }
 ]

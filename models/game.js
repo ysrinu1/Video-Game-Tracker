@@ -2,11 +2,10 @@ const { Model, DataTypes } = require('sequelize');
 const sequelize = require('../config/connection');
 
 
-// Original model name was "User"
-class Games extends Model {
+class Game extends Model {
 }
 
-Games.init(
+Game.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,7 +13,7 @@ Games.init(
       primaryKey: true,
       autoIncrement: true
   },
-    name: {
+    title: {
       type: DataTypes.STRING,
       allowNull: false
   },
@@ -22,11 +21,11 @@ Games.init(
     type: DataTypes.STRING,
     allowNull: true
   },
-   gamer_id: {
+   user_id: {
       type: DataTypes.INTEGER,
       allowNull: false,
       references: {
-        model: 'gamers',
+        model: 'user',
         key: 'id'
     },
   },
@@ -54,8 +53,8 @@ Games.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'games',
+    modelName: 'game',
   },
 );
 
-module.exports = Games;
+module.exports = Game;

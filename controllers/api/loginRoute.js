@@ -3,17 +3,17 @@ const { Gamers } = require('../../models');
 
 router.post('/', async (req, res) => {
   try {
-    // Find user by username entered
-    const userCheck = await User.findOne({ where: {user_name:  req.body.user_name}});
+    // Find gamer by username entered
+    const gamerCheck = await Gamers.findOne({ where: {name:  req.body.name}});
   
     // Failure message on username/password being incorrect
-    if (!userCheck) {
+    if (!gamerCheck) {
       res.status(400).json({ message: 'Your username and/or password are incorrect, please retry' });
       return;
     }
 
     // Validate entered password matches stored password
-    const validPassword = await userCheck.checkPw(req.body.password);
+    const validPassword = await gamerCheck.checkPw(req.body.password);
     
     // Failure message on incorrect password entry
     if (!validPassword) {
@@ -21,12 +21,12 @@ router.post('/', async (req, res) => {
       return;
     }
 
-    // Session variables based on the current logged in user
+    // Session variables based on the current logged in gamer
     req.session.save(() => {
-      req.session.user_id = userCheck.id;
+      req.session.user_id = gamerCheck.id;
       req.session.logged_in = true;
       
-      res.json({ user: userCheck, message: `You're logged in`})
+      res.json({ gamer: gamerCheck, message: `You're logged in`})
     });
     
 
