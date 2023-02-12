@@ -1,0 +1,45 @@
+<section class="hero is-primary is-small is-bold">
+    <div class="hero-body">
+        <div class="container has-text-centered">
+            <h1 class="title">Your games list</h1>
+        </div>
+    </div>
+</section>
+<div class="has-text-centered is-half">
+    <button class="button is-warning mt-5 is-half js-modal-trigger" data-target="add-post-modal">Click to add another Game</button>
+</div>
+<p class="has-text-centered is-half">Click on a game to update or delete it:</p>
+<div class="container">
+    <section class="articles">
+        <div class="column is-8 is-offset-2">
+
+            {{!-- Presents each post belonging to the logged in user --}}
+            {{#each game as |game| }}
+            <div class="card article">
+                <div class="card-content">
+                    <div>
+                        <h3 style="font-size:125%;font-weight:bolder"><a href="./dashboard/{{game.id}}">{{game.title}}</a></h3> 
+                    </div>
+                    <div>
+                        <p>{{game.summary}}</p>
+                    </div>
+                    <div class="update-delete-div has-text-right"></div>
+                </div>
+            </div>
+            {{/each}}
+        </div>
+    </section>
+</div>
+    <div id="add-post-modal" class="modal">
+    <div class="modal-background"></div>
+<div class="modal-content">
+    <div class="box">
+            <input class="input is-info" type="text" placeholder="Title" id="modal-title-input">
+            <textarea class="textarea is-info mt-5" placeholder="Content:" id="modal-content-textarea"></textarea>
+    </div>
+</div>  
+<script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/js/login.js"></script>
+<script src="/js/logout.js"></script>
+<script src="/js/modal.js"></script>
+<script src="/js/addPost.js"></script>
