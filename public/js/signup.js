@@ -2,7 +2,7 @@ const signUpHandler = async (e) => {
     e.preventDefault();
     const user_name = $('#signup-username').val().trim();
     const password = $('#signup-password').val().trim();
-    const email = $('#signup-name').val().trim();
+    const email = $('#signup-email').val().trim();
     const birth_date = $('#signup-date').val().trim();
 
     if (user_name == "") {

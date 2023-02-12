@@ -1,5 +1,5 @@
-const checkInputs = (name, password) => {
-    if (name == '') {
+const checkInputs = (user_name, password) => {
+    if (user_name == '') {
         alert('Username');
     } if (password == '') {
         alert('Password');
