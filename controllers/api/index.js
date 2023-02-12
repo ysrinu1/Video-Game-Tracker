@@ -8,6 +8,6 @@ const gameEntryRoute = require('./gameEntryRoutes');
 router.use('/login', loginRoute);
 router.use('/logout', logoutRoute);
 router.use('/signup', signupRoute);
-router.use('/gameEntry', gameEntryRoute);
+router.use('/gameentry', gameEntryRoute);
 
 module.exports = router;
