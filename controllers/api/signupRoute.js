@@ -1,14 +1,30 @@
 const router = require('express').Router();
-const { YourCustomModel } = require('../../models');
+const { response } = require('express');
+const { User } = require('../../models');
 
-router.get('/', async (req, res) => {
-  try {
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
+router.post('/', async (req, res) => {
+  const findUser = await User.findOne({ where: { user_name: req.body.user_name } });
+  if(findUser) {
+      res.status(400).json({ message: 'Looks like there is already a user with that username. Click the login button to sign in, or try a different username.' });
+      return;
+  } try {
+      const user = await User.create({
+          user_name: req.body.user_name,
+          password: req.body.password,
+          email: req.body.email,
+          birth_date: req.body.birth_date
+
+      });
+
+      req.session.save(() => {
+          req.session.user_id = user.id;
+          req.session.logged_in = true;
+          res.status(200).json(user);
+      });
+       
+      } catch (error) {
+              res.status(500).json(error)
+          }
 });
 
 module.exports = router;

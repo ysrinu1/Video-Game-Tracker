@@ -30,20 +30,11 @@ User.init(
         isEmail: true
       },
     },
-    birth_month: {
-      type: DataTypes.INTEGER,
+    birth_date: {
+      type: DataTypes.DATE,
       allowNull: true,
       validate: {
-        max: 12,
-        min: 1,
-      }
-    },
-    birth_day: {
-      type: DataTypes.INTEGER,
-      allowNull: true,
-      validate: {
-        max: 31,
-        min: 1,
+        isDate: true,
       }
     },
     password: {
