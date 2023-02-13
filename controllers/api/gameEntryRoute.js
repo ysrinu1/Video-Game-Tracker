@@ -1,13 +1,17 @@
 const router = require('express').Router();
-const { Game } = require('../../models');
+const { response } = require('express');
+const { User, Game } = require('../../models');
 
 // Get all Games
 router.get('/', async (req, res) => {
     try {
-        const postedData = await Game.findAll({
+        const gameData = await Game.findAll({
+            include: [{
+                model: User
+            }]
         })
-            const posts = postedData.map((post) => post.get({ plain: true }));
-            res.status(200).json({ posts });
+            const games = gameData.map((game) => game.get({ plain: true }));
+            res.status(200).json({ games });
 
     } catch (err) {
         res.status(500).json(err);
@@ -19,11 +23,12 @@ router.post('/', async (req, res) => {
     try {
         const post = await Game.create({
             title: req.body.name,
+            system: req.body.system,
             genre: req.body.genre,
-            user_id: req.session.gamer_id,
+            user_id: req.session.user_id,
             rating: req.body.rating,
             summary: req.body.summary,
-            tips_tricks: req.body.tips_tricks
+            tips_tricks: req.body
           });
         res.status(200).json({post, message : `New Game Created!`})
     } catch (err) {
