@@ -26,7 +26,7 @@
       "
     >
       <h1 style="text-align: center; font-size: 22px">Enter you game here</h1>
-      <form class="loginform">
+      <form class="loginform" onkeydown="return event.key != 'Enter';">
         <input
           style="
             width: 100%;
@@ -39,6 +39,7 @@
             color: #000;
           "
           type="text"
+          id="game-title"
           name=""
           placeholder="Game Title"
         />
@@ -54,6 +55,7 @@
             color: #000;
           "
           type="text"
+          id="game-system"
           name=""
           placeholder="Gaming System"
         />
@@ -69,6 +71,7 @@
             color: #000;
           "
           type="text"
+          id="game-genre"
           name=""
           placeholder="Game Genre"
         />
@@ -84,6 +87,7 @@
             color: #000;
           "
           type="text"
+          id="game-rating"
           name=""
           placeholder="Rating: 0 - 10"
         />
@@ -99,6 +103,7 @@
             color: #000;
           "
           type="text"
+          id="game-summary"
           name=""
           placeholder="Game Summary"
         />
@@ -113,6 +118,7 @@
             color: #000;
           "
           type="text"
+          id="game-tips_tricks"
           name=""
           placeholder="Tips & Tricks"
         />
@@ -130,6 +136,7 @@
             border-radius: 6px;
           "
           type="submit"
+          id="add-game"
           name=""
           value="Add Game"
         />
@@ -144,4 +151,7 @@
         >
       </form>
     </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="/js/addGame.js"></script>
+
 </body>
