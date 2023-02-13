@@ -3,7 +3,7 @@
     margin: 0;
     padding: 0;
     background-image: url(./views/pic/gameentrybackground.jpg) ;
-    background-size: 1500px;
+    background-size: auto;
     background-repeat:no-repeat;
     background-color: #000;
     font-family: sans-serif;
@@ -28,6 +28,7 @@
         transition: box-shadow .3s;
       '
   >
+        <form class="loginform">
       <input
         style='
             width: 100%;
@@ -61,25 +62,24 @@
         name=''
         placeholder='Enter Password'
       />
-
-      <input
-        style='
+        <input
+          style="
             width: 100%;
             margin-bottom: 20px;
             border: none;
             outline: none;
             height: 40px;
-            background: #2079ff;
+            background: #1274ec;
             color: #fff;
-            font-family: "Press Start 2P", cursive;
+            font-family: 'Press Start 2P', cursive;
             font-size: 18px;
             border-radius: 6px;
-          '
-        type='submit'
-        id="signup-btn"
-        name=''
-        value='Sign Up'
-      /><br />
+          "
+          type="submit"
+          name=""
+          id="signup-btn"
+          value="Signup"
+        /><br />
         <a
           href="/login"
           style="
