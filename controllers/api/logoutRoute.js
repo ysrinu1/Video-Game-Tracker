@@ -1,14 +1,16 @@
 const router = require('express').Router();
-const { YourCustomModel } = require('../../models');
+const { User } = require('../../models');
 
-router.get('/', async (req, res) => {
-  try {
-    // Pass serialized data and session flag into template
-    res.render('homepage', { 
-    });
-  } catch (err) {
-    res.status(500).json(err);
-  }
-});
-
-module.exports = router;
+router.post('/', (req, res) => {
+    if (req.session.logged_in) {
+      
+      // Removes all session data on logout
+      req.session.destroy(() => {
+        res.status(204).end();
+      });
+    } else {
+      res.status(404).end();
+    }
+  });
+  
+  module.exports = router;
