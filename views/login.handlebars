@@ -1,18 +1,17 @@
 <body
-  style='
-    margin: 0;
-    padding: 0;
-    background-image: url(./views/pic/gameentrybackground.jpg) ;
-    background-size: auto;
-    background-repeat:no-repeat;
-    background-color: #000;
-    font-family: sans-serif;
-    background-position: center 10px; 
-  '
->
-  <div
-    style='
-
+    style="
+      margin: 0;
+      padding: 0;
+      background: url(./images/mainbackground.jpg);
+      background-size: auto;
+      background-color: #000;
+      font-family: sans-serif;
+      background-position: center 20px;
+      
+    "
+  >
+    <div
+      style="
         width: 320px;
         height: fit;
         background: #cecdc2;
@@ -23,14 +22,13 @@
         transform: translate(-50%, -50%);
         box-sizing: border-box;
         border-radius: 20px;
-        padding: 20px 30px;
+        padding: 50px 30px;
         box-shadow: 20px 20px 20px;
-        transition: box-shadow .3s;
-      '
-  >
-        <form class="loginform">
-      <input
-        style='
+      "
+    >
+      <form class="loginform">
+        <input
+          style="
             width: 100%;
             margin-bottom: 20px;
             border: none;
@@ -39,15 +37,14 @@
             outline: none;
             height: 40px;
             color: #000;
-          '
-        type='text'
-        id="signup-username"
-        name=''
-        placeholder='Enter Username'
-      />
-
-      <input
-        style='
+          "
+          type="text"
+          id="user-name"
+          name=""
+          placeholder="Enter Username"
+        />
+        <input
+          style="
             width: 100%;
             margin-bottom: 20px;
             border: none;
@@ -56,12 +53,12 @@
             outline: none;
             height: 40px;
             color: #000;
-          '
-        type='password'
-        id="signup-password"
-        name=''
-        placeholder='Enter Password'
-      />
+          "
+          type="password"
+          name=""
+          id="password"
+          placeholder="Enter Password"
+        />
         <input
           style="
             width: 100%;
@@ -69,7 +66,7 @@
             border: none;
             outline: none;
             height: 40px;
-            background: #1274ec;
+            background: #EC1212;
             color: #fff;
             font-family: 'Press Start 2P', cursive;
             font-size: 18px;
@@ -77,22 +74,31 @@
           "
           type="submit"
           name=""
-          id="signup-btn"
-          value="Signup"
+          id="login-btn"
+          value="Login"
         /><br />
+        <!--DONT FORGET TO ADD LINK TO SIGNUP PAGE ONCE HANDLEBARS IS WORKING -->
         <a
-          href="/login"
+          href="/signup"
           style="
             font-weight: bold;
             font-size: 14px;
             color: #1100ff;
           "
-          >Login Instead</a
+          >Signup Instead</a
         >
-    </form>
-  </div>
-
-  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
-  <script src="/js/signup.js"></script>
-
-</body>
+        <br/><br/>
+        <a
+          href="/home"
+          style="
+            font-weight: bold;
+            font-size: 14px;
+            color: #1100ff;
+          "
+          >Home Jeeves!</a
+        >
+      </form>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="/js/login.js"></script>
+  </body>
