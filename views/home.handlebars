@@ -2,7 +2,7 @@
   style='
     margin: 0;
     padding: 0;
-    background: url(./pic/signupbackground.jpg);
+    background: url(images/gamingbackground.jpg);
     background-size: 1500px;
     background-repeat:no-repeat;
     background-color: #000;
@@ -11,11 +11,14 @@
   '
 >
 
-  <div
+  
+
+{{#if logged_in}}
+<div
     style='
 
         width: 320px;
-        height: 275px;
+        height: 325px;
         background: #000000;
         color: #9a6c01;
         top: 50%;
@@ -33,9 +36,6 @@
   >
     <h1 style='text-align: center; font-size: 22px'>It's dangerous to go alone! Take this</h1>
     <br/>
-
-{{#if logged_in}}
-
     <form class='loginform'>
             <input
                 style="
@@ -91,12 +91,35 @@
             "
                 type="text/css"
                 name=""
+                id="logout"
                 onclick=window.location='/logout';
                 value="Logout"
             />
             </form>
-
+</div>
 {{else}}
+<div
+    style='
+
+        width: 320px;
+        height: 275px;
+        background: #000000;
+        color: #9a6c01;
+        top: 50%;
+        left: 50%;
+        right: 50%;
+        bottom: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 20px 30px;
+        box-shadow: 1px 1px 100px 1px;
+        transition: box-shadow .3s;
+      '
+  >
+    <h1 style='text-align: center; font-size: 22px'>It's dangerous to go alone! Take this</h1>
+    <br/>
     <form class='loginform'>
             <input
             style="
@@ -137,10 +160,11 @@
                 value="Sign Up"
             />
     </form>
+</div>
+{{/if}}
 
-  {{/if}}
   
-  </div>
+
       <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
       <script src="/js/modal.js"></script>
       <script src="/js/login.js"></script>

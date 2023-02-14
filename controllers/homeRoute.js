@@ -4,8 +4,15 @@ const auth = require('../utils/auth');
 
 router.get('/', async (req, res) => {
   try {
-    res.render('home', { 
-    });
+    res.render('home', {logged_in: req.session.logged_in});
+  } catch (err) {
+    res.status(500).json(err);
+  }
+});
+
+router.get('/home', async (req, res) => {
+  try {
+    res.render('home', {logged_in: req.session.logged_in});
   } catch (err) {
     res.status(500).json(err);
   }
@@ -45,6 +52,20 @@ router.get('/dashboard', async (req, res) => {
   } catch (err) {
     res.status(500).json(err);
   }
+});
+
+router.get('/logout', (req, res) => {
+    debugger
+  if (req.session) {
+    
+    // Removes all session data on logout
+    req.session.destroy(() => {
+      res.status(204).end();
+    });
+  } else {
+    res.status(404).end();
+  }
+  res.redirect('/');
 });
 
 module.exports = router;

@@ -1,12 +1,12 @@
 const logout = async (event) => {
     event.preventDefault();
-    const response = await fetch('/api/logout', {
-        method: 'POST',
+    const response = await fetch('/logout', {
+        method: 'GET',
         headers: {'Content-Type': 'application/json'},
     });
     
-    if(response.ok) {
-        document.location.replace('/login');
+    if(response.status == 200) {
+        document.location.replace('/');
     } else {
         alert('Something has gone wrong')
     }
