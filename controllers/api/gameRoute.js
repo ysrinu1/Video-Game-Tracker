@@ -29,7 +29,7 @@ router.post('/', async (req, res) => {
             title: req.body.title,
             system: req.body.system,
             genre: req.body.genre,
-            user_id: req.session.user_id,
+            user_id: `${req.session.user_id}`,
             rating: req.body.rating,
             summary: req.body.summary,
             tips_tricks: req.body.tips_tricks
