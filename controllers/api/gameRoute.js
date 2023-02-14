@@ -22,13 +22,13 @@ router.get('/', async (req, res) => {
 router.post('/', async (req, res) => {
     try {
         const post = await Game.create({
-            title: req.body.name,
+            title: req.body.title,
             system: req.body.system,
             genre: req.body.genre,
-            user_id: req.session.user_id,
+            user_id: `${req.session.user_id}`,
             rating: req.body.rating,
             summary: req.body.summary,
-            tips_tricks: req.body
+            tips_tricks: req.body.tips_tricks
           });
         res.status(200).json({post, message : `New Game Created!`})
     } catch (err) {
