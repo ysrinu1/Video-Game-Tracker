@@ -1,4 +1,5 @@
 <body style="
+        height: 100%;
         color: white;
         background: rgb(34,35,41);
         background: linear-gradient(90deg, rgb(31, 31, 31) 0%, rgb(41, 41, 41) 15%, rgb(42, 44, 46) 47%, rgb(23, 23, 32) 81%);
@@ -10,7 +11,8 @@
 
   <div class="sidebar" 
     style="
-    height:100vh; width: 20vw;
+    height: 100vh; width: 20vw;
+    
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(22, 24, 31) 27%, rgb(26, 28, 31) 61%, rgb(30, 30, 34) 100%);
     border-right: 1px solid rgb(0, 0, 0);
@@ -22,7 +24,7 @@
 
       <div class='container has-text-centered'>
 
-        <h1 class='title' style="border-bottom: 3px solid rgb(129, 126, 126); padding-left: 80px; color: rgb(129, 126, 126); font-size: 40px; font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;">Games</h1>
+        <h1 class='title' style="border-bottom: 3px solid rgb(129, 126, 126); padding-left: 120px; color: rgb(129, 126, 126); font-size: 40px; font-family:monospace; align-text: center;">Games</h1>
 
       </div>
 
@@ -46,13 +48,13 @@
                 value="My Game List"
         >Click to add another Game</button>
       </div>
-      <div style="margin-left: 70px;">
+      <div style="padding-left: 70px; font-family:monospace; font-size: 15px; align-text: center;">
         {{#each userGames as |game| }}
-
+            
               <div>
                 <h3>{{game.title}}</h3>
               </div>
-
+            
         {{/each}}
       </div>
 
@@ -64,14 +66,14 @@
 
   
   {{!-- <p class='has-text-centered is-half'>Click on a game to update or delete it:</p> --}}
-  <div class='container' style="">
-    <section class='articles'>
-      <div class='column is-8 is-offset-2' style="margin-left: 40px; margin: 20px; display:grid;  >
+  <div class='container' style="padding: 100px;">
+    <section class='articles' style="" >
+      <div class='column is-8 is-offset-2' style= "display:grid; grid-template-columns: 200px 200px 200px 200px; grid-gap: 100px; text-align: center; font-family:monospace " >
 
 
         {{! Presents each game belonging to the logged in user }}
-        {{#each userGames as |game| }}
-
+        {{#each userGames as |game|}}
+            <div style=" background-color: rgba(0,0,0,0.5); height:275px;">
               <div>
                 <h3>{{game.title}}</h3>
               </div>
@@ -90,6 +92,7 @@
               <div>
                 <p>{{game.rating}}</p>
               </div>
+            </div>
         {{/each}}
       </div>
     </section>
