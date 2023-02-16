@@ -4,6 +4,8 @@
     <div class='hero-body'>
       <div class='container has-text-centered'>
         <h1 class='title'>Your games list</h1>
+        
+
       </div>
     </div>
   </section>
@@ -22,8 +24,10 @@
     <section class='articles'>
       <div class='column is-8 is-offset-2'>
 
+
         {{! Presents each game belonging to the logged in user }}
         {{#each userGames as |game| }}
+
               <div>
                 <h3>{{game.title}}</h3>
               </div>
