@@ -16,6 +16,13 @@ router.get('/:id', async (req, res) => {
               attributes: ['user_name']
               }
       ]});
+
+      const userGames = user.map((game) => game.get({ plain: true}));
+      res.render('dashboard', {
+        userGames, 
+          logged_in: req.session.logged_in, 
+      });
+
       } catch (err) {
           console.error(err);
           res.status(400).json(err);

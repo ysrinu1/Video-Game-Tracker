@@ -23,12 +23,12 @@
       <div class='column is-8 is-offset-2'>
 
         {{! Presents each game belonging to the logged in user }}
-        {{#each games}}
+        {{#each userGames as |game| }}
               <div>
-                <h3>{{games.title}}</h3>
+                <h3>{{game.title}}</h3>
               </div>
               <div>
-                <p>{{games.summary}}</p>
+                <p>{{game.summary}}</p>
               </div>
         {{/each}}
       </div>
