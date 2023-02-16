@@ -2,6 +2,7 @@
         height: 100%;
         color: white;
         background: rgb(34,35,41);
+        background: url(./images/dashbaordbackground.jpg);
         background: linear-gradient(90deg, rgb(31, 31, 31) 0%, rgb(41, 41, 41) 15%, rgb(42, 44, 46) 47%, rgb(23, 23, 32) 81%);
         margin: 0; 
         padding: 0; 
@@ -12,7 +13,6 @@
   <div class="sidebar" 
     style="
     height: 100vh; width: 20vw;
-    
     background: rgb(0,0,0);
     background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(22, 24, 31) 27%, rgb(26, 28, 31) 61%, rgb(30, 30, 34) 100%);
     border-right: 1px solid rgb(0, 0, 0);
@@ -90,7 +90,7 @@
                 <h3>{{game.tips_tricks}}</h3>
               </div>
               <div>
-                <p>{{game.rating}}</p>
+                <p>My Rating: {{game.rating}}</p>
               </div>
             </div>
         {{/each}}
