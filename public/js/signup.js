@@ -5,18 +5,18 @@ const signUpHandler = async (e) => {
 
     if (user_name == "") {
         $('#signup-username').attr("style", "border-color: red;")
-        $('#signup-username').attr("placeholder", "Please enter a username")
+        $('#signup-username').attr("placeholder", "Enter a username")
     } 
 
     if (password.length < 10) {
         $('#signup-password').attr("style", "border-color: red;")
-        $('#signup-password').attr("placeholder", "Please enter a valid password")
+        $('#signup-password').attr("placeholder", "Must be 10 Characters")
         return;
     } 
 
     if (password.length > 10) {
         $('#signup-password').attr("style", "border-color: red;")
-        $('#signup-password').attr("placeholder", "Please enter a valid password")
+        $('#signup-password').attr("placeholder", "Must be 10 Characters")
         return;
     } 
    
