@@ -1,4 +1,4 @@
-<body style="background: url(images/dashboardbackground.jpg); color: #fff;">
+<body style="background: url(images/dashboardbackground.jpg); color: #000000;">
 
   <section class='hero is-primary is-small is-bold'>
     <div class='hero-body'>
@@ -28,7 +28,19 @@
                 <h3>{{game.title}}</h3>
               </div>
               <div>
+                <p>{{game.system}}</p>
+              </div>
+                            <div>
+                <h3>{{game.genre}}</h3>
+              </div>
+              <div>
                 <p>{{game.summary}}</p>
+              </div>
+                            <div>
+                <h3>{{game.tips_tricks}}</h3>
+              </div>
+              <div>
+                <p>{{game.rating}}</p>
               </div>
         {{/each}}
       </div>
