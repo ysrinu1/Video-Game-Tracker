@@ -23,19 +23,17 @@
   <div class='container'>
     <section class='articles'>
       <div class='column is-8 is-offset-2'>
-        {{! Presents each post belonging to the logged in user }}
-        {{#each game}}
-          <div class='card article'>
-            <div class='card-content'>
+
+
+        {{! Presents each game belonging to the logged in user }}
+        {{#each userGames as |game| }}
+
               <div>
                 <h3>{{game.title}}</h3>
               </div>
               <div>
                 <p>{{game.summary}}</p>
               </div>
-              <div class='update-delete-div has-text-right'></div>
-            </div>
-          </div>
         {{/each}}
       </div>
     </section>

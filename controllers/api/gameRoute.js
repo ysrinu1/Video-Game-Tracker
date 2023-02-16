@@ -8,12 +8,12 @@ router.get('/', async (req, res) => {
         const gameData = await Game.findAll({
             where:{
                 // TODO: Fix this to be currently logged in user
-                user_id: "5"
+                user_id: `${req.session.user_id}`
             }
         })
         console.log(gameData)    
         const games = gameData.map((game) => game.get({ plain: true }));
-        console.log(games)
+        console.log(game)
             res.render('dashboard',games);
             res.status(200).json({ games });
 
