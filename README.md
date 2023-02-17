@@ -6,6 +6,7 @@
 - [Link to Application](#link-to-live-application)
 - [Description](#description)
 - [Local Installation](#local-installation)
+- [Data Model Visualization(#data-model)
 - [App Screenshots](#screen-shots)
 - [License](#license)
 - [How to Contribute](#how-to-contribute)
@@ -79,6 +80,10 @@ The four contributers to this project were
 [Back to Top](#table-of-contents)
 
 ---
+## Data Model
+
+![Screen Shot of DatModel](./pics/DataModels.png)
+
 ## Screen Shots
 
 ![Screen Shot of Home](./pics/homescreenshot.png)
