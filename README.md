@@ -5,7 +5,7 @@
 - [Coding Badges](#coding-badges)
 - [Link to Application](#link-to-live-application)
 - [Description](#description)
-- [Local Installation](#installation)
+- [Local Installation](#local-installation)
 - [App Screenshots](#screen-shots)
 - [License](#license)
 - [How to Contribute](#how-to-contribute)
