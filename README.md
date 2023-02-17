@@ -98,8 +98,9 @@ The four contributers to this project were
 ---
 ![Screen Shot of Dahsboard](./pics/dashboardscreenshot.png)
 
----
+
 [Back to Top](#table-of-contents)
+
 ---
 
 # License
