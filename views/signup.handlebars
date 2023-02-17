@@ -1,0 +1,98 @@
+<body
+  style='
+    margin: 0;
+    padding: 0;
+    background-image: url(images/signupbackground.jpg) ;
+    background-size: auto;
+    background-repeat:no-repeat;
+    background-color: #000;
+    font-family: sans-serif;
+    background-position: center 10px; 
+  '
+>
+  <div
+    style='
+
+        width: 320px;
+        height: fit;
+        background: rgba(0, 0, 0, 0.8);
+        color: #113af1;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 20px 30px;
+        box-shadow: 1px 1px 100px 1px;
+        transition: box-shadow .3s;
+      '
+  >
+        <form class="loginform">
+      <input
+        style='
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          '
+        type='text'
+        id="signup-username"
+        name=''
+        placeholder='Enter Username'
+      />
+
+      <input
+        style='
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          '
+        type='password'
+        id="signup-password"
+        name=''
+        placeholder='Enter 10-Character Password'
+      />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #1274ec;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 6px;
+          "
+          type="submit"
+          name=""
+          id="signup-btn"
+          value="Signup"
+        /><br />
+        <a
+          href="/login"
+          style="
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+          "
+          >Login Instead</a
+        >
+    </form>
+  </div>
+
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="/js/signup.js"></script>
+
+</body>

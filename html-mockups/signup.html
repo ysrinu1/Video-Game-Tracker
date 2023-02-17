@@ -10,7 +10,7 @@
       }
     </style>
     <!-- <link rel="stylesheet" href="../public/css/login.css"> -->
-    <title>Login</title>
+    <title>Sign Up</title>
   </head>
   <body
     style="
@@ -21,7 +21,6 @@
       background-repeat: no-repeat;
       background-color: #000;
       font-family: sans-serif;
-      
     "
   >
     <div
@@ -36,12 +35,43 @@
         transform: translate(-50%, -50%);
         box-sizing: border-box;
         border-radius: 20px;
-        padding: 50px 30px;
+        padding: 20px 30px;
       "
     >
-      <h1 style="text-align: center; font-size: 22px">Login Here</h1>
+      <h1 style="text-align: center; font-size: 22px">Create an Account</h1>
       <form class="loginform">
-        <p style="font-weight: bold">Username</p>
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #000;
+          "
+          type="text"
+          name=""
+          placeholder="First Name"
+        />
+
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #000;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #000;
+          "
+          type="date"
+          name=""
+          placeholder="Birth Month"
+        />
+
         <input
           style="
             width: 100%;
@@ -57,7 +87,7 @@
           name=""
           placeholder="Enter Username"
         />
-        <p style="font-weight: bold">Password</p>
+
         <input
           style="
             width: 100%;
@@ -73,6 +103,7 @@
           name=""
           placeholder="Enter Password"
         />
+
         <input
           style="
             width: 100%;
@@ -87,28 +118,18 @@
           "
           type="submit"
           name=""
-          value="Login"
+          value="Sign Up"
         /><br />
+
         <a
-          href="#"
+          href="./login.html"
           style="
             text-decoration: none;
             font-size: 12px;
             line-height: 20px;
             color: #000;
           "
-          >Forgot your password?</a
-        ><br />
-        <!--DONT FORGET TO ADD LINK TO SIGNUP PAGE ONCE HANDLEBARS IS WORKING -->
-        <a
-          href="/signup"
-          style="
-            text-decoration: none;
-            font-size: 12px;
-            line-height: 20px;
-            color: #000;
-          "
-          >Dont have an account yet? Sign up Here!</a
+          >Already have an account? Login Here!</a
         >
       </form>
     </div>

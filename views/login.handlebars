@@ -1,16 +1,103 @@
-
-<div style="margin: 0; padding: 0; background: url(../images/pexels-tomasz-filipek-1637438\(1\).jpg); background-size: cover; background-repeat: no-repeat;background-color: #000; font-family: sans-serif;">
-    <div style="width: 320px; height: 450px; background: #cfcdb6; color: #000; top: 50%; left: 50%; position: absolute; transform: translate(-50%,-50%); box-sizing: border-box; border-radius: 20px; padding: 70px 30px;"> 
-        <h1 style="text-align: center; font-size: 22px;">Login Here</h1>
-        <form class="loginform">
-            <p style="font-weight: bold; ">Username</p>
-            <input style="width: 100%; margin-bottom: 20px; border: none; border-bottom: 2px solid #000; background: transparent; outline: none; height: 40px; color: #000;" type="text" name="" placeholder="Enter Username">
-            <p style="font-weight: bold; ">Password</p>
-            <input style="width: 100%; margin-bottom: 20px;  border: none; border-bottom: 2px solid #000; background: transparent; outline: none; height: 40px; color: #000;" type="password" name="" placeholder="Enter Password">
-            <input style="width: 100%; margin-bottom: 20px; border: none; outline: none; height: 40px; background: #ec1212; color: #fff; font-size: 18px; border-radius: 6px;" type= "submit" name="" value="Login"><br>
-            <a href="#" style="text-decoration: none; font-size: 12px; line-height: 20px; color: #000;">Forgot your password?</a><br>
-            <a href="#" style="text-decoration: none; font-size: 12px; line-height: 20px; color: #000;">Sign up!</a>
-        </form>
-        
+<body
+    style="
+      margin: 0;
+      padding: 0;
+      background: url(./images/mainbackground.jpg);
+      background-size: auto;
+      background-color: #000;
+      font-family: sans-serif;
+      background-position: center 20px;
+      
+    "
+  >
+    <div
+      style="
+        width: 320px;
+        height: fit;
+        background: rgba(0, 0, 0, 0.8);
+        color: #EC1212;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 50px 30px;
+        box-shadow: 1px 1px 100px 1px;
+      "
+    >
+      <form class="loginform">
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="user-name"
+          name=""
+          placeholder="Enter Username"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 2px solid #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="password"
+          name=""
+          id="password"
+          placeholder="Enter Password"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #EC1212;
+            color: #fff;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 6px;
+          "
+          type="submit"
+          name=""
+          id="login-btn"
+          value="Login"
+        /><br />
+        <a
+          href="/signup"
+          style="
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+          "
+          >Signup Instead</a
+        >
+        <br/><br/>
+        <a
+          href="/"
+          style="
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+          "
+          >Home Jeeves!</a
+        >
+      </form>
     </div>
-</div>
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="/js/login.js"></script>
+  </body>

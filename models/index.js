@@ -1,13 +1,14 @@
-const Gamers = require('./gamers');
-const Games = require('./games');
+const User = require('./user');
+const Game = require('./game');
 
-// A single Gamer can have many games
-Gamers.hasMany(Games, {
-    foreignKey: 'game_id'
-});
 // Each Game belongs to a single gamer
-Games.belongsTo(Gamers, {
-    foreignKey: 'gamer_id'
+Game.belongsTo(User, {
+    foreignKey: 'user_id'
 });
 
-module.exports = { Gamers, Games };
+User.hasMany(Game, {
+    foreignKey: 'user_id',
+    onDelete: 'CASCADE'
+});
+
+module.exports = { User, Game };

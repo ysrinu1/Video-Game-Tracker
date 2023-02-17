@@ -1,0 +1,110 @@
+<body style="
+        height: 100%;
+        color: white;
+        background: rgb(34,35,41);
+        background: url(./images/dashbaordbackground.jpg);
+        background: linear-gradient(90deg, rgb(31, 31, 31) 0%, rgb(41, 41, 41) 15%, rgb(42, 44, 46) 47%, rgb(23, 23, 32) 81%);
+        margin: 0; 
+        padding: 0; 
+        display: flex;
+        ">
+
+
+  <div class="sidebar" 
+    style="
+    height: 100vh; width: 20vw;
+    background: rgb(0,0,0);
+    background: linear-gradient(180deg, rgb(20, 20, 20) 0%, rgb(22, 24, 31) 27%, rgb(26, 28, 31) 61%, rgb(30, 30, 34) 100%);
+    border-right: 1px solid rgb(0, 0, 0);
+    box-shadow: 10px 0 5px -2px #181818
+    
+    ">
+
+    <section class='hero is-primary is-small is-bold' >
+
+      <div class='container has-text-centered'>
+
+        <h1 class='title' style="border-bottom: 3px solid rgb(129, 126, 126); padding-left: 120px; color: rgb(129, 126, 126); font-size: 40px; font-family:monospace; align-text: center;">Games</h1>
+
+      </div>
+
+      <div class='has-text-centered is-half'>
+        <button
+          style="width: 50%;
+            margin-left: 70px;
+            border: none;
+            outline: none;
+            height: 90px;
+            background: #EC1212;
+            color:#000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 13px;
+            border-radius: 6px;
+          "
+          class='button'
+          type="text/css"
+                name=""
+                onclick=window.location='/game';
+                value="My Game List"
+        >Click to add another Game</button>
+      </div>
+      <div style="padding-left: 70px; font-family:monospace; font-size: 15px; align-text: center;">
+        {{#each userGames as |game| }}
+            
+              <div>
+                <h3>{{game.title}}</h3>
+              </div>
+            
+        {{/each}}
+      </div>
+
+    </section>
+
+  </div>
+  
+
+
+  
+  {{!-- <p class='has-text-centered is-half'>Click on a game to update or delete it:</p> --}}
+  <div class='container' style="padding: 100px;">
+    <section class='articles' style="" >
+      <div class='column is-8 is-offset-2' style= "display:grid; grid-template-columns: 200px 200px 200px 200px; grid-gap: 100px; text-align: center; font-family:monospace " >
+
+
+        {{! Presents each game belonging to the logged in user }}
+        {{#each userGames as |game|}}
+            <div style=" background-color: rgba(0,0,0,0.5); height:275px;">
+              <div>
+                <h3>{{game.title}}</h3>
+              </div>
+              <div>
+                <p>{{game.system}}</p>
+              </div>
+                            <div>
+                <h3>{{game.genre}}</h3>
+              </div>
+              <div>
+                <p>{{game.summary}}</p>
+              </div>
+                            <div>
+                <h3>{{game.tips_tricks}}</h3>
+              </div>
+              <div>
+                <p>My Rating: {{game.rating}}</p>
+              </div>
+            </div>
+        {{/each}}
+      </div>
+    </section>
+  </div>
+</body>
+
+<script
+  src='https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js'
+  integrity='sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj'
+  crossorigin='anonymous'
+></script>
+<script src='/js/login.js'></script>
+<script src='/js/logout.js'></script>
+<script src='/js/modal.js'></script>
+<script src='/js/addGame.js'></script>

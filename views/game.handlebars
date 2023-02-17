@@ -1,0 +1,159 @@
+<body
+    style="
+      margin: 0;
+      padding: 0;
+      background: url(images/gameentrybackground.jpg);
+      background-size: auto 1500px;
+      background-color: #000;
+      font-family: sans-serif;
+      background-position: center 0px;
+      background-repeat: no-repeat;
+    "
+  >
+    <div
+      style="
+        width: 320px;
+        height: fit;
+        background: rgba(0, 0, 0, 0.8);
+        color: #0c3d0a;
+        top: 50%;
+        left: 50%;
+        position: absolute;
+        transform: translate(-50%, -50%);
+        box-sizing: border-box;
+        border-radius: 20px;
+        padding: 50px 30px;
+        box-shadow: 1px 1px 100px 1px;
+      "
+    >
+      <h1 style="text-align: center; font-size: 22px; color: #fff;">Enter you game here</h1>
+      <form class="loginform" onkeydown="return event.key != 'Enter';">
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-title"
+          name=""
+          placeholder="Game Title"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-system"
+          name=""
+          placeholder="Gaming System"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-genre"
+          name=""
+          placeholder="Game Genre"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-rating"
+          name=""
+          placeholder="Rating: 0 - 10"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-summary"
+          name=""
+          placeholder="Game Summary"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            border-bottom: 1px dotted #fff;
+            background: transparent;
+            outline: none;
+            height: 40px;
+            color: #fff;
+          "
+          type="text"
+          id="game-tips_tricks"
+          name=""
+          placeholder="Tips & Tricks"
+        />
+        <input
+          style="
+            width: 100%;
+            margin-bottom: 20px;
+            border: none;
+            outline: none;
+            height: 40px;
+            background: #5bec12;
+            color:#000;
+            font-family: 'Press Start 2P', cursive;
+            font-size: 18px;
+            border-radius: 6px;
+          "
+          type="submit"
+          id="add-game"
+          name=""
+          value="Add Game"
+        />
+        <a
+          href="/"
+          style="
+            font-weight: bold;
+            font-size: 14px;
+            color: #fff;
+          "
+          >Home Jeeves!</a
+        >
+      </form>
+    </div>
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+  <script src="/js/addGame.js"></script>
+
+</body>

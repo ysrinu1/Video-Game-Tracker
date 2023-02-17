@@ -3,11 +3,13 @@ const bcrypt = require('bcrypt');
 const sequelize = require('../config/connection');
 
 
-// Original model name was "User"
-class UserData extends Model {
+class User extends Model {
+  checkPw(passWord) {
+      return bcrypt.compareSync(passWord, this.password);
+  }
 }
 
-UserData.init(
+User.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -15,43 +17,30 @@ UserData.init(
       primaryKey: true,
       autoIncrement: true
     },
-    name: {
+    user_name: {
       type: DataTypes.STRING,
-      allowNull: false
-    },
-    email: {
-      type: DataTypes.STRING,
-      allowNull: false,
       unique: true,
-      validate: {
-        isEmail: true
-      },
-    },
-    birthmonth: {
-      type: DataTypes.INTEGER,
-      allowNull: true
-    },
-    birthday: {
-      type: DataTypes.INTEGER,
-      allowNull: true
+      allowNull: false
     },
     password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [8]
+        len: [10]
       },
     },
   },
   {
-    hooks: {
-    },
+    hooks: {beforeCreate: async (newUserData) => {
+            newUserData.password = await bcrypt.hash(newUserData.password, 10);
+            return newUserData;
+    }},
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'custom',
-  }
+    modelName: 'user',
+}
 );
 
-module.exports = UserData;
+module.exports = User;

@@ -1,14 +1,18 @@
 [
-    {
-      "user_name" : "Gamer01",
-      "password": "password01"
-    },
-    {
-      "user_name" : "Gamer02",
-      "password": "password02"
-    },
-    {
-      "user_name" : "Gamer03",
-      "password": "password03"
-    }
+  {
+    "user_name": "Gamer01",
+    "password": "password01"
+  },
+  {
+    "user_name" : "Gamer02",
+    "password": "password02"
+  },
+  {
+    "user_name" : "Gamer03",
+    "password": "password03"
+  },
+  {
+    "user_name" : "Gamer04",
+    "password": "password04"
+  }
 ]
